@@ -1,23 +1,31 @@
 const inquirer = require(`inquirer`);
 const fs = require('fs');
 
-const readMe = ({data}) =>
-`<README.md>
-${title}
+const readMe = ({title, description, installation, usage, contributing, test, github}) =>
+`#${title}
 ***
 ${description}
 ***
 Table of Contents
--Installation
+-Installation (#installation)
 -Usage
 -Credits
 -License
 ***
+Installation
 ${installation}
 ***
+Usage
 ${usage}
 ***
-${contributing}`
+Contributing
+${contributing}
+***
+Test
+${test}
+***
+Questions
+https://github.com/${github}`;
 
 
 
@@ -54,10 +62,25 @@ inquirer
     message: 'Provide instructions and examples for use?',
     name: 'usage',
 },
+// {
+//     type: 'input',
+//     message: ',
+//     name: 'license',
+// },
 {
     type: 'input',
     message: 'List your collaborators, if any, with links to their Github. If none type N/A',
     name: 'contributing',
+},
+{
+    type: 'input',
+    message: 'Did you write any tests for your application? If so, please describe.',
+    name: 'test',
+},
+{
+    type: 'input',
+    message: 'Enter your Github username.',
+    name: 'github',
 },
 
 ])
