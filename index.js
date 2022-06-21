@@ -1,7 +1,7 @@
 const inquirer = require(`inquirer`);
 const fs = require('fs');
 
-const readMe = ({title, description, installation, usage, contributing, test, github}) =>
+const readMe = ({title, description, installation, usage, contributing, license, test, github}) =>
 `#${title}
 ***
 ## Description
@@ -22,6 +22,8 @@ ${usage}
 ## Contributing
 ${contributing}
 ***
+## License
+${license}
 ## Test
 ${test}
 ***
@@ -58,11 +60,12 @@ inquirer
     message: 'Provide instructions and examples for use?',
     name: 'usage',
 },
-// {
-//     type: 'list',
-//     message: ',
-//     name: 'license',
-// },
+{
+    type: 'list',
+    message: 'Select a license from the list',
+    choices: [`![GPL license](https://img.shields.io/static/v1?label=license&message=GPL&color=green)`, '![MIT license](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)'],
+    name: 'license',
+},
 {
     type: 'input',
     message: 'List your collaborators, if any, with links to their Github. If none type N/A',
