@@ -4,27 +4,28 @@ const fs = require('fs');
 const readMe = ({title, description, installation, usage, contributing, test, github}) =>
 `#${title}
 ***
+## Description
 ${description}
 ***
-Table of Contents
--Installation (#installation)
--Usage
--Credits
--License
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 ***
-Installation
+## Installation
 ${installation}
 ***
-Usage
+## Usage
 ${usage}
 ***
-Contributing
+## Contributing
 ${contributing}
 ***
-Test
+## Test
 ${test}
 ***
-Questions
+## Questions
 https://github.com/${github}`;
 
 
@@ -47,11 +48,6 @@ inquirer
     message: 'Describe your project?',
     name: 'description',
 },
-// {
-//     type: 'input',
-//     message: 'tabel of contentns???.... ',
-//     name: 'tableContents',
-// },
 {
     type: 'input',
     message: 'What are the steps required to install your project?',
@@ -63,7 +59,7 @@ inquirer
     name: 'usage',
 },
 // {
-//     type: 'input',
+//     type: 'list',
 //     message: ',
 //     name: 'license',
 // },
