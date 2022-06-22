@@ -1,8 +1,8 @@
 const inquirer = require(`inquirer`);
 const fs = require('fs');
 
-const readMe = ({title, description, installation, usage, contributing, license, test, github}) =>
-`#${title}
+const readMe = ({title, description, installation, usage, contributing, license, test, github, email}) =>
+`# ${title}
 ***
 ## Description
 ${description}
@@ -12,6 +12,8 @@ ${description}
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Test](#test)
+- [Questions](#questions)
 ***
 ## Installation
 ${installation}
@@ -28,7 +30,8 @@ ${license}
 ${test}
 ***
 ## Questions
-https://github.com/${github}`;
+https://github.com/${github}
+email:${email}`;
 
 
 
@@ -63,7 +66,7 @@ inquirer
 {
     type: 'list',
     message: 'Select a license from the list',
-    choices: [`![GPL license](https://img.shields.io/static/v1?label=license&message=GPL&color=green)`, '![MIT license](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)'],
+    choices: [`![GPL license](https://img.shields.io/static/v1?label=license&message=GPL&color=green)`, '![MIT license](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)','![IPL 1.0 License](https://img.shields.io/badge/License-IPL%201.0-blue.svg)'],
     name: 'license',
 },
 {
@@ -78,8 +81,13 @@ inquirer
 },
 {
     type: 'input',
-    message: 'Enter your Github username.',
+    message: 'What is your Github username?',
     name: 'github',
+},
+{
+    type: 'input',
+    message: 'What is your email address?',
+    name: 'email',
 },
 
 ])
