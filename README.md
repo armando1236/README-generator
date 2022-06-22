@@ -23,7 +23,7 @@ Type in 'node index.js' into the terminal.
 N/A
 ***
 ## License
-![IPL 1.0 License](https://img.shields.io/badge/License-IPL%201.0-blue.svg)
+***
 ## Test
 No
 ***
