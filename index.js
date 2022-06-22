@@ -30,8 +30,8 @@ ${license}
 ${test}
 ***
 ## Questions
-https://github.com/${github}
-email:${email}`;
+- https://github.com/${github}
+- For additional questions please email me at: ${email}`;
 
 
 
@@ -60,18 +60,18 @@ inquirer
 },
 {
     type: 'input',
-    message: 'Provide instructions and examples for use?',
+    message: 'Provide instructions and examples for use.',
     name: 'usage',
 },
 {
     type: 'list',
-    message: 'Select a license from the list',
+    message: 'Select a license from the list.',
     choices: [`![GPL license](https://img.shields.io/static/v1?label=license&message=GPL&color=green)`, '![MIT license](https://img.shields.io/static/v1?label=license&message=MIT&color=blue)','![IPL 1.0 License](https://img.shields.io/badge/License-IPL%201.0-blue.svg)'],
     name: 'license',
 },
 {
     type: 'input',
-    message: 'List your collaborators, if any, with links to their Github. If none type N/A',
+    message: 'List your collaborators, if any, with links to their Github. If none type N/A.',
     name: 'contributing',
 },
 {
